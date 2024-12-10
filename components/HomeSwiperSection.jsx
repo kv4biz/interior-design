@@ -62,7 +62,7 @@ const HomeSwiperSection = () => {
             living experience.
           </p>
         </motion.div>
-        <a className="my-4" href="/gallary">
+        <a className="my-4 mx-auto lg:mx-0" href="/gallary">
           <Button className="inline-flex items-center px-8 py-4 text-white rounded-full shadow-lg hover:bg-gray-800 hover:ring-2 hover:ring-gray-950 ring-offset-2">
             View Gallary <ArrowUpRight className="w-5 h-5 ml-2" />
           </Button>
