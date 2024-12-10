@@ -19,7 +19,7 @@ const Header = () => {
     <header
       className={`${
         header
-          ? "py-4 bg-tertiary shadow-lg dark:bg-accent"
+          ? "py-4 bg-tertiary px-4 shadow-lg dark:bg-accent"
           : "py-6 dark:bg-transparent"
       } sticky top-0 z-30`}
     >
