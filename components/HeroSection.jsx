@@ -44,19 +44,12 @@ const HeroSection = () => {
         </Button>
       </div>
       {/* right section */}
-      <div className="w-full lg:w-1/2 pt-10 lg:pt-0 px-5 lg:px-0">
-        <div className="lg:absolute h-full xl:h-[448px] xl:w-[600px] lg:h-[344px] lg:w-[500px] hex-img-container overflow-hidden">
-          {/* <Image
-            src="/image/hall.png"
-            alt="image1"
-            width={800}
-            height={500}
-            className="object-cover group-hover:scale-110 transition-all duration-500"
-          /> */}
+      <div className="w-full lg:w-1/2 pt-10 lg:pt-0 px-2 lg:px-0">
+        <div className="lg:absolute h-full xl:h-[448px] xl:w-[650px] lg:h-[344px] lg:w-[500px] hex-img-container overflow-hidden">
           <video
-            width="320"
-            height="240"
-            className="obiect-cover w-full h-full"
+            width="650"
+            height="448"
+            className="obiect-cover w-full h-full group-hover:scale-110"
             autoPlay
             loop
             muted
