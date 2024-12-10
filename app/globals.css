@@ -88,7 +88,7 @@ body {
 }
 @layer utilities {
   .hex-img-container {
-    clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 15% 100%, 0% 85%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 25%, 100% 100%, 25% 100%, 0% 75%);
   }
 }
 @layer utilities {

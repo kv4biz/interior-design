@@ -45,14 +45,25 @@ const HeroSection = () => {
       </div>
       {/* right section */}
       <div className="w-full lg:w-1/2 pt-10 lg:pt-0 px-5 lg:px-0">
-        <div className="lg:absolute h-full xl:h-[448px] xl:w-[670px] lg:h-[344px] lg:w-[500px] hex-img-container overflow-hidden">
-          <Image
+        <div className="lg:absolute h-full xl:h-[448px] xl:w-[600px] lg:h-[344px] lg:w-[500px] hex-img-container overflow-hidden">
+          {/* <Image
             src="/image/hall.png"
             alt="image1"
             width={800}
             height={500}
             className="object-cover group-hover:scale-110 transition-all duration-500"
-          />
+          /> */}
+          <video
+            width="320"
+            height="240"
+            className="obiect-cover w-full h-full"
+            autoPlay
+            loop
+            muted
+            preload="none"
+          >
+            <source src="/video/herovideo.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>
