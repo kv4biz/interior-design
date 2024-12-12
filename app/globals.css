@@ -96,3 +96,9 @@ body {
     clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 0% 100%);
   }
 }
+
+@layer utilities {
+  .hex-img-container3 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 15% 100%);
+  }
+}

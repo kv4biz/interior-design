@@ -1,12 +1,19 @@
 "use client";
 import { desVariants, tagVariants, titleVariants } from "@/utils/animation";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 
 const page = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
-    <div className="">
+    <div>
       <div className="bg-[url('/image/whoweare.jpg')] bg-center bg-cover">
         <motion.h1
           initial="offscreen"
@@ -44,9 +51,9 @@ const page = () => {
           </motion.p>
         </div>
         <div>
-          <div className="items-center lg:items-start lg:flex gap-x-8 mb-10">
+          <div className="items-center lg:items-start lg:flex gap-x-8 mb-4">
             {/* left section */}
-            <div className="w-full">
+            <motion.div style={{ scale }} ref={ref} className="w-full">
               <Image
                 src="/image/gallery1123.jpg"
                 width={700}
@@ -54,7 +61,7 @@ const page = () => {
                 className="object-cover"
                 alt="about-image"
               />
-            </div>
+            </motion.div>
             {/* left section */}
             <div className="p mt-5 lg:mt-0">
               <motion.p
@@ -95,6 +102,70 @@ const page = () => {
                 Ready to transform your space? Let us design the interior of
                 your dreams—where every detail is crafted for comfort and style.
               </motion.span>
+            </div>
+          </div>
+        </div>
+        {/* team section */}
+        <div className="lg:py-5">
+          <div className="pt-4">
+            <h1 className="oswald font-medium text-4xl uppercase text-center tracking-widest">
+              Our Team
+            </h1>
+          </div>
+          <div className="grid py-8 gap-16 lg:grid-cols-3">
+            <div className="border-2 border-primary">
+              <div className="p-4 text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5 transition hover:-translate-y-3 hover:-translate-x-3">
+                <Image
+                  src="/image/profile2.jpg"
+                  alt="profile"
+                  width={200}
+                  height={200}
+                  className="mx-auto rounded-full"
+                />
+                <h2 className="p py-4 text-2xl uppercase font-semibold">
+                  Building Survey
+                </h2>
+                <p className="p text-sm">
+                  Creativity is the ability to generate, create or discover new
+                  ideas, solutions, and possibilities
+                </p>
+              </div>
+            </div>
+            <div className="border-2 border-primary">
+              <div className="p-4 text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5 transition hover:-translate-y-3 hover:-translate-x-3">
+                <Image
+                  src="/image/profile1.jpg"
+                  alt="profile"
+                  width={200}
+                  height={200}
+                  className="mx-auto rounded-full"
+                />
+                <h2 className="p py-4 text-2xl uppercase font-semibold">
+                  Building Survey
+                </h2>
+                <p className="p text-sm">
+                  Creativity is the ability to generate, create or discover new
+                  ideas, solutions, and possibilities
+                </p>
+              </div>
+            </div>
+            <div className="border-2 border-primary">
+              <div className="p-4 text-center bg-gray-100 aspect-square dark:bg-tertiary -m-0.5 transition hover:-translate-y-3 hover:-translate-x-3">
+                <Image
+                  src="/image/profile3.jpg"
+                  alt="profile"
+                  width={200}
+                  height={200}
+                  className="mx-auto rounded-full"
+                />
+                <h2 className="p py-4 text-2xl uppercase font-semibold">
+                  Building Survey
+                </h2>
+                <p className="p text-sm">
+                  Creativity is the ability to generate, create or discover new
+                  ideas, solutions, and possibilities
+                </p>
+              </div>
             </div>
           </div>
         </div>
