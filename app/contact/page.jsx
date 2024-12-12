@@ -45,12 +45,15 @@ const page = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-        <h1 className="oswald font-bold tracking-tighter text-[88px] lg:text-[202px] text-primary mb-6">
+        <h1
+          className="oswald font-bold tracking-tighter text-[88px] lg:text-[202px] text-tertiary mb-6"
+          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+        >
           Let's Connect
         </h1>
 
         {/* Social Buttons */}
-        <div className="flex gap-6 mb-8">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 mb-8">
           <a
             href="https://wa.me/1234567890"
             target="_blank"
@@ -82,12 +85,12 @@ const page = () => {
 
         {/* Schedule a Meeting */}
         <p className="text-white">
-          Schedule a meeting:{" "}
+          Schedule a meeting with us:{" "}
           <a
             href="https://calendly.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-blue-400 hover:text-blue-300 transition"
+            className="hover:underline text-white hover:text-tertiary transition"
           >
             Click now
           </a>

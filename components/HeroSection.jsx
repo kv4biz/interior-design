@@ -48,13 +48,16 @@ const HeroSection = () => {
           <video
             width="650"
             height="448"
-            className="obiect-cover w-full h-full group-hover:scale-110"
+            className="object-cover w-full h-full group-hover:scale-110"
             autoPlay
             loop
             muted
+            playsInline
             preload="none"
+            poster="/image/hall.png"
           >
             <source src="/video/herovideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
         </div>
       </div>

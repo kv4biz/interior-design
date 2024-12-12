@@ -27,7 +27,9 @@ const Page = () => {
           autoPlay
           loop
           muted
+          playsInline
           preload="none"
+          poster="/image/hall.png"
         >
           <source src="/video/herovideo.mp4" type="video/mp4" />
         </video>
